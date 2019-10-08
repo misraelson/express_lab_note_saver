@@ -1,0 +1,21 @@
+<%- include("../partials/header") %>
+<div style="display: flex; flex-direction: column; height: 100%; background-color: darkgoldenrod;">
+  <h1>New Note</h1>
+  <!-- by default froms will make a GET request to the current url -->
+  <!-- we need to add the action attribute and set it to the correct restful route -->
+  <!-- and specify which verb to use -->
+  <form action="/notes/<%=note.id%>" method="POST" style="margin: 10px; padding: 10px; min-width: 45%; border: solid 10px black; background-color: darkolivegreen">
+    <input type="hidden" name="_method" value="PATCH">
+    <div>
+      <label for="title">Note Title</label>
+      <input type="text" name="title" placeholder="Note Title..." value="<%= note.title %>">
+    </div>
+    <div>
+      <label for="content">Note Content</label>
+      <textarea cols="50" rows="10" name="content" placeholder="Note Content..."> <%= note.content %></textarea>
+    </div>
+    <input type="submit" value="Update Note" style="background-color: #83995a; width: 100px; height: 30px; border-radius: 5px;">
+  </form>
+</div>
+
+<%- include("../partials/footer") %>

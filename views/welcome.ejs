@@ -1,0 +1,9 @@
+<%- include("./partials/header") %>
+  <header>
+    <h1> Welcome To Note Taker <%= username ? username : null %> </h1>
+    <form action="/sign_in" method="POST">
+      <input type="text" name="username" placeholder="username" value="<%=username%>">
+      <input type="submit" value="Sign In">
+    </form>
+  </header>
+<%- include("./partials/footer") %>

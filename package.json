@@ -1,0 +1,28 @@
+{
+  "name": "express_lab_note_saver",
+  "version": "1.0.0",
+  "description": "CRUD note saver",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "express",
+    "pg",
+    "crud"
+  ],
+  "author": "Matthew Israelson",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "knex": "^0.19.4",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1",
+    "pg": "^7.12.1",
+    "nodemon": "^1.19.3"
+  },
+  "devDependencies": {
+  }
+}

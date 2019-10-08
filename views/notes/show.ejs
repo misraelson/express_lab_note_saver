@@ -1,0 +1,18 @@
+<%- include("../partials/header") %>
+<div style="display: flex; flex-direction: column; height: 100%; background-color: darkgoldenrod; padding: 20px;">
+  <h1 style="margin-left: 20px;">Note Show Page</h1>
+  <div style="margin: 10px; padding: 10px; min-width: 45%; border: solid 10px black; background-color: darkolivegreen">
+    <h2> <%= title %> </h2>
+    <h2> <%= content %> </h2>
+    <div style="display: flex;">
+      <form action="/notes/<%=id%>" method="POST" style="margin-right: 20px;">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="DELETE NOTE" style="background-color: #83995a; width: 100px; height: 30px; border-radius: 5px;">
+      </form>
+      <form action="/notes/<%=id%>/edit" method="GET">
+        <input type="submit" value="EDIT NOTE" style="background-color: #83995a; width: 100px; height: 30px; border-radius: 5px;">
+      </form>
+    </div>
+  </div>
+</div>
+<%- include("../partials/footer") %>
